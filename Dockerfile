@@ -1,5 +1,4 @@
-FROM python:alpine3.7
-
+FROM python:3.8-slim
 
 COPY . ./
 WORKDIR ./
