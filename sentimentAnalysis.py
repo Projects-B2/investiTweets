@@ -29,7 +29,7 @@ from flask import Flask, redirect, url_for, request
 from flask_cors import CORS, cross_origin
 from flask_ngrok import run_with_ngrok
 app = Flask(__name__)
-cors = CORS(app)
+# cors = CORS(app)
 #run_with_ngrok(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
@@ -164,17 +164,20 @@ def getSentimentTweets(keyword):
 #getSentimentTweets("modi")
             
         
-    
+@app.after_request
+def after_request(response):
+  response.headers.add('Access-Control-Allow-Origin', '*')
+  response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+  response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+  return response
 
 
 @app.route('/analyse',methods = ['POST'])
-@cross_origin()
 def analyse():
     return getSentimentTweets(request.json['word'])
 
 
 @app.route('/sentiments',methods = ['POST'])
-@cross_origin()
 def getSentiments():
     result = {}
     for i in request.json['words']:
@@ -184,7 +187,6 @@ def getSentiments():
 
 
 @app.route('/sentiment',methods = ['POST'])
-@cross_origin()
 def getsentiment():
     print(request.json)
     sentence = request.json['sentence']
@@ -192,17 +194,11 @@ def getsentiment():
     return {"sentiment" :predictTweet(sentence)}
 
 @app.route('/singlelinesentiment',methods = ['POST'])
-@cross_origin()
 def getSingleSentiment():
     sentence = str(request.args['sentence'])
     print(predictTweet(sentence))
     return {"sentiment" :predictTweet(sentence)}
 
-@app.after_request
-def after_request(response):
-  response.headers.add('Access-Control-Allow-Origin', '*')
-  response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-  response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
-  return response
+
 app.run(host ='0.0.0.0', port = 5000, debug = True)
 
