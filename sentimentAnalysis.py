@@ -31,7 +31,7 @@ from flask_ngrok import run_with_ngrok
 app = Flask(__name__)
 # cors = CORS(app)
 #run_with_ngrok(app)
-# app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 model = gensim.models.KeyedVectors.load_word2vec_format('twitter-word2Vecmodel.bin', binary = True)
@@ -167,6 +167,8 @@ def getSentimentTweets(keyword):
 @app.after_request
 def after_request(response):
   response.headers.add('Access-Control-Allow-Origin', '*')
+  response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+  response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
   return response
 
 
