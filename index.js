@@ -33,7 +33,7 @@ $("#submit").click(function(){
 
 	$.ajax({
     type: 'POST',
-    url: 'http://investitweet-shivanshu1641.cloud.okteto.net/sentiments',
+    url: 'https://investitweet-shivanshu1641.cloud.okteto.net/sentiments',
     data: json_data, // or JSON.stringify ({name: 'jonas'}),
     success: function(response) { 
 	
