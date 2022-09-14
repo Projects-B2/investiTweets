@@ -1,12 +1,12 @@
 # Results
-* Model Results
-    -  Naive Bayes 
-    -  Support Vector Machine
-    -  RNN (Recurrent Neural Network)
-    -  LSTM (Long short-term memory)
-    -  Bidirectional LSTM
-* Combined Model Results
-* Dashboard Snippets
+* [Model Results](https://github.com/shivanshu1641/investiTweets/blob/main/Results/Readme.md#model-results)
+    -  [Naive Bayes ](https://github.com/shivanshu1641/investiTweets/blob/main/Results/Readme.md#naive-bayes)
+    -  [Support Vector Machine](https://github.com/shivanshu1641/investiTweets/blob/main/Results/Readme.md#support-vector-machine)
+    -  [RNN (Recurrent Neural Network)](https://github.com/shivanshu1641/investiTweets/blob/main/Results/Readme.md#rnn-recurrent-neural-network)
+    -  [LSTM (Long short-term memory)](https://github.com/shivanshu1641/investiTweets/blob/main/Results/Readme.md#lstm-long-short-term-memory)
+    -  [Bidirectional LSTM](https://github.com/shivanshu1641/investiTweets/blob/main/Results/Readme.md#bidirectional-lstm)
+* [Combined Model Results](https://github.com/shivanshu1641/investiTweets/blob/main/Results/Readme.md#combined-results)
+* [Dashboard Snippets](https://github.com/shivanshu1641/investiTweets/blob/main/Results/Readme.md#dashboard-snippets)
 
 ## Model Results
 ### Naive Bayes
