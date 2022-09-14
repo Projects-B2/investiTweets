@@ -114,10 +114,10 @@ def getDateFromStr(d):
   return date_object
 
 def getTweets(word):
-  consumer_key= 'WBkZ7bpZ2pvFgO4vcm3Oem8u6'
-  consumer_secret= 'kHJgsTy3NtziZ1PFphFqWBPY010L1B9AZyUGKUlC2Sc6gCU9Vg'
-  access_token= '828904514187096065-KKnJt0g00ssPjnnt1ZP4VPhh7XR6dIi'
-  access_token_secret= '2o483hU8wd7PiaNWeHMobM4BJ4HyJUDeL6G3k5br6VoXH'
+  consumer_key= ''
+  consumer_secret= ''
+  access_token= ''
+  access_token_secret= ''
   api = twitter.Api(consumer_key=consumer_key,
                   consumer_secret=consumer_secret,
                   access_token_key=access_token,
