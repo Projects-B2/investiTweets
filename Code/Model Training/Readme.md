@@ -3,11 +3,11 @@
 
 
 ## Models Used
-* [Naive Bayes]()
-* [SVM]()
-* [RNN]()
-* [LSTM]()
-* [BI LSTM]()
+* [Naive Bayes](https://github.com/shivanshu1641/investiTweets/tree/main/Code/Model%20Training#naive-bayes)
+* [SVM](https://github.com/shivanshu1641/investiTweets/tree/main/Code/Model%20Training#svm)
+* [RNN](https://github.com/shivanshu1641/investiTweets/tree/main/Code/Model%20Training#rnn)
+* [LSTM](https://github.com/shivanshu1641/investiTweets/tree/main/Code/Model%20Training#lstm)
+* [BI LSTM](https://github.com/shivanshu1641/investiTweets/tree/main/Code/Model%20Training#bi-lstm)
 
 
 ### Naive Bayes
